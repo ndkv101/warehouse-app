@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Jacket, Accessory, Shirt } from './components/Products'
+import { Switch, Route, Link } from 'react-router-dom'
+import Container from '@material-ui/core/Container'
+import styled from 'styled-components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Navigation = styled.div`
+	background: #f7d1ba;
+	padding: 1em;
+	text-align: center;
+`
+
+const App = () => {
+	return (
+		<Container>
+			<div className='container'>
+				<h2 className='header'>WAREHOUSE APP</h2>
+				<Navigation>
+					<Link to='/jackets'>JACKET</Link>
+					<Link to='/shirts'>SHIRT</Link>
+					<Link to='/accessories'>ACCESSORY</Link>
+				</Navigation>
+
+				<Switch>
+					<Route path='/jackets'>
+						<Jacket />
+					</Route>
+					<Route path='/shirts'>
+						<Shirt />
+					</Route>
+					<Route path='/accessories'>
+						<Accessory />
+					</Route>
+				</Switch>
+			</div>
+		</Container>
+	)
 }
 
-export default App;
+export default App
