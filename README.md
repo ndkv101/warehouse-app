@@ -105,7 +105,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 **vu.nguyen101@gmail.com**
 
-Project Link: [warehouse 101](https://warehouse101.netlify.app/jackets)
+Project Link: [warehouse 101](https://warehouse101.netlify.app)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
