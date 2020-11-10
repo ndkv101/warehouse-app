@@ -1,5 +1,5 @@
 import { Jacket, Accessory, Shirt } from './components/Products'
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route, Link, Redirect } from 'react-router-dom'
 import Container from '@material-ui/core/Container'
 import styled from 'styled-components'
 
@@ -29,6 +29,9 @@ const App = () => {
 					</Route>
 					<Route path='/accessories'>
 						<Accessory />
+					</Route>
+					<Route path='/'>
+						<Redirect to='/jackets' />
 					</Route>
 				</Switch>
 			</div>
