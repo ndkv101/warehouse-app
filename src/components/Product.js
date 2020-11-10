@@ -50,6 +50,7 @@ const Product = ({ type }) => {
 		return response.data
 	}
 
+	// get availability state from API data
 	const checkAvailability = id => {
 		const productID = id.toUpperCase()
 		const data = availability.find(item => item.id === productID)
@@ -62,6 +63,7 @@ const Product = ({ type }) => {
 
 	const getAvailability = async name => {
 		try {
+			// While working with API, I found that sometimes it response with unexpected data, so the function /// below to make sure it always returns properly data
 			let result = []
 			do {
 				const response = await axios.get(
